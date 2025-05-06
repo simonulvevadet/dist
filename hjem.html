@@ -1,40 +1,91 @@
-<font color="red" size="60">Velkommen til GameXChange</font>
-<center>
-    <img src="banner2.png" class="herobilde"> <!--  -->
-</center>
-<h2 style="margin-top: -50px;">Velkommen til GameXchange.no!</h2>
-<marquee behavior="" direction="">
-    <h3>Ditt nettsted for kjøp og salg av brukte spill! </h3>
-</marquee>
-<div id="links" style="position: auto; bottom:0; margin-top: 200px;">
-    <a style="margin-right: 10px" href="">Hjem (du er her)</a><a style="margin-right: 10px"
-        href="høydepunkter.html">Høydepunkter</a><a style="margin-right: 10px" href="login.html">Kjøp</a><a
-        style="margin-right: 10px" href="Ny kunde? Registrer her"></a><astyle="margin-right: 10px" href="omoss.htm1">Om
-        oss og kontakt</a><a href="allproducts.html">Alle produkter</a>
-        <div onclick="darkmode()">darkmode()</div>
-</div>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameXChange</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .title {
+            color: red;
+            font-size: 60px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .herobilde {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Velkommen til GameXChange</h1>
+    
+    <img src="banner2.png" alt="GameXChange Banner" class="herobilde">
+    
+    <h2>Velkommen til GameXchange.no!</h2>
+    
+    <p style="text-align: center; font-size: 1.2em;">Ditt nettsted for kjøp og salg av brukte spill!</p>
+    
+    <nav>
+        <a href="#">Hjem (du er her)</a>
+        <a href="hoydepunkter.html">Høydepunkter</a>
+        <a href="login.html">Kjøp</a>
+        <a href="register.html">Ny kunde? Registrer her</a>
+        <a href="omoss.html">Om oss og kontakt</a>
+        <a href="allproducts.html">Alle produkter</a>
+        <button onclick="darkmode()">Dark Mode</button>
+    </nav>
 
-<h2>Dagbok</h2>
-<marquee behavior="" direction="">SKriv en hilsen!</marquee>
-<form id="comment-form">
-    <input type="text" id="comment" />
-    <button type="submit">Send</button>
-</form>
-<div id="comment-section"></div>
+    <h2>Dagbok</h2>
+    <p style="text-align: center;">Skriv en hilsen!</p>
+    
+    <form id="comment-form" style="text-align: center;">
+        <input type="text" id="comment" placeholder="Skriv en kommentar" required />
+        <button type="submit">Send</button>
+    </form>
+    
+    <div id="comment-section" style="text-align: center; margin-top: 20px;"></div>
+    
+    <footer>
+        &copy; 2025 GameXChange. Alle rettigheter reservert.
+    </footer>
 
-
-<link rel="stylesheet" type="text/css" href="style.css">
-
-<script>
-    function darkmode() {
-        /* funker ikke :() */
-        var element = document.body;
-        element.classList.toggle("dark-mode");
-    }
-    document.getElementById('comment-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const input = document.getElementById('comment').value;
-        document.getElementById('comment-section').innerHTML += `<p>${input}</p>`;
-    });
-
-</script>
+    <script>
+        function darkmode() {
+            document.body.classList.toggle("dark-mode");
+        }
+        
+        document.getElementById('comment-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const input = document.getElementById('comment').value;
+            const commentSection = document.getElementById('comment-section');
+            const p = document.createElement('p');
+            p.textContent = input;
+            commentSection.appendChild(p);
+            document.getElementById('comment').value = '';
+        });
+    </script>
+</body>
+</html>

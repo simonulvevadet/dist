@@ -1,26 +1,78 @@
-
-
-
-
-
+<!DOCTYPE html>
+<html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt oss</title>
+    <title>Kontakt oss – GameXchange</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .submit-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        nav {
+            text-align: center;
+            margin-top: 30px;
+        }
+        nav a {
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Kontakt GameXchange</h1>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-    <label for="vehicle1"> Spørsmål (annet) </label><br>
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-    <label for="vehicle2"> Jeg vil selge noe </label><br>
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-    <label for="vehicle3"> Jeg vil klage </label><br> 
-    Navn: <input type="text" name="navn"><br><br>
-    Epost: <input type="email"><br><br>
-    Melding:<br>
-    <textarea rows="4" cols="40"></textarea><br><br>
-</form>
-<div>Send</div>
-    <a style="margin-right: 10px" href="">Hjem (du er her)</a><a style="margin-right: 10px" href="høydepunkter.html">Høydepunkter</a><a style="margin-right: 10px" href="login.html">Kjøp</a><a style="margin-right: 10px" href="Ny kunde? Registrer her"></a><astyle="margin-right: 10px" href="omoss.htm1">Om oss og kontakt</a><a href="allproducts.html">Alle produkter</a>
+    <form>
+        <label>
+            <input type="checkbox" name="sporsmal" value="annet">
+            Spørsmål (annet)
+        </label>
+        <label>
+            <input type="checkbox" name="sporsmal" value="selge">
+            Jeg vil selge noe
+        </label>
+        <label>
+            <input type="checkbox" name="sporsmal" value="klage">
+            Jeg vil klage
+        </label>
+
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" name="navn">
+
+        <label for="epost">E-post:</label>
+        <input type="email" id="epost" name="epost">
+
+        <label for="melding">Melding:</label>
+        <textarea id="melding" name="melding" rows="4"></textarea>
+
+        <button type="submit" class="submit-btn">Send</button>
+    </form>
+
+    <nav>
+        <a href="hjem.html">Hjem </a>
+        <a href="hoydepunkter.html">Høydepunkter</a>
+        <a href="login.html">Kjøp</a>
+        <a href="register.html">Ny kunde? Registrer her</a>
+        <a href="omoss.html">Om oss og kontakt</a>
+        <a href="allproducts.html">Alle produkter</a>
+    </nav>
 </body>
+</html>
