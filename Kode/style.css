@@ -1,3 +1,7 @@
+
+
+
+
 /* GLOBALT */
 body {
     background-color: #f5f5f5;
@@ -128,4 +132,44 @@ button:hover {
         border-right: none;
         border-bottom: 1px solid #eee;
     }
+}
+
+.navbar {
+    touch-action: manipulation;
+    background-image: linear-gradient(#ff4d4d, #ff1a1a 62%, #cc0000);
+    border: .5px solid #b30000;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, .12) 0 1px 3px, rgba(0, 0, 0, .14) 0 1px .5px, rgba(255, 204, 204, .4) 0 1px .5px inset, rgba(153, 0, 0, .46) 0 -1px .5px inset, #990000 0 0 0 .5px inset;
+    color: #fff;
+    font-weight: 600;
+    outline: 3px #fff;
+    outline-offset: 0;
+    position: relative;
+    text-shadow: #990000 0 -1px .5px;
+    top: 0;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 100%;
+    padding: 12px 24px 14px;
+    transition-property: outline-offset, border-color, transform;
+    transition-duration: .2s;
+}
+  
+.navbar:active, .button-6:hover {
+    outline: 0;
+}
+  
+.navbar:hover {
+    background-image: linear-gradient(#ff6666, #ff1a1a 62%, #cc0000);
+    box-shadow: rgba(0, 0, 0, .12) 0 2px 6px, rgba(0, 0, 0, .14) 0 1px .5px, rgba(255, 204, 204, .4) 0 1px .5px inset, rgba(153, 0, 0, .46) 0 -1px .5px inset, #990000 0 0 0 .5px inset;
+    opacity: 1;
+    transform: scale(1.04);
+}
+  
+.navbar:active {
+    background-image: linear-gradient(#800000, #ff1a1a 38%, #ff4d4d);
+    border-color: #660000;
+    box-shadow: #4d0000 0 1px inset, transparent 0 -1px .5px inset, rgba(204, 0, 0, .53) 0 2px .5px inset, rgba(153, 0, 0, .31) 0 0 0 .5px inset;
+    text-shadow: #990000 0 1px .5px;
+    transform: scale(.98);
 }

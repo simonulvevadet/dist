@@ -5,59 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameXChange</title>
     <link rel="stylesheet" href="../Kode/style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .title {
-            color: red;
-            font-size: 60px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .herobilde {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            padding: 10px;
-            background-color: #f1f1f1;
-        }
-        .dark-mode {
-            background-color: #121212;
-            color: #f0f0f0;
-        }
-    </style>
+   
 </head>
 <body>
     <h1 class="title">Velkommen til GameXChange</h1>
     
     <img src="../Media/red_banner.png" alt="GameXChange Banner" class="herobilde">
-    
+    <nav>
+        <div class="navbar">  <a href="../Kode/hjem.html">Hjem </a>
+            <a href="../Kode/hoydepunkter.html">Høydepunkter</a>
+            <a href="../Kode/login.html">Kjøp</a>
+            <a href="../Kode/register.html">Ny kunde? Registrer her</a>
+            <a href="../Kode/omoss.html">Om oss </a>
+            <a href="../Kode/allproducts.html">Alle produkter</a>
+            <a href="../Kode/kontakt.html">Kontakt</a>
+        </div>
+       
+    </nav>
     <h2>Velkommen til GameXchange.no!</h2>
     
     <p style="text-align: center; font-size: 1.2em;">Ditt nettsted for kjøp og salg av brukte spill!</p>
     
-    <nav>
-        <a href="../Kode/hjem.html">Hjem </a>
-        <a href="../Kode/hoydepunkter.html">Høydepunkter</a>
-        <a href="../Kode/login.html">Kjøp</a>
-        <a href="../Kode/register.html">Ny kunde? Registrer her</a>
-        <a href="../Kode/omoss.html">Om oss og kontakt</a>
-        <a href="../Kode/allproducts.html">Alle produkter</a>
-        <button onclick="darkmode()">Dark Mode</button>
-    </nav>
 
+    <button onclick="darkmode()">Dark Mode</button>
     <h2>Dagbok</h2>
     <p style="text-align: center;">Skriv en hilsen!</p>
     
@@ -72,20 +42,6 @@
         &copy; 2025 GameXChange. Alle rettigheter reservert.
     </footer>
 
-    <script>
-        function darkmode() {
-            document.body.classList.toggle("dark-mode");
-        }
-        
-        document.getElementById('comment-form').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const input = document.getElementById('comment').value;
-            const commentSection = document.getElementById('comment-section');
-            const p = document.createElement('p');
-            p.textContent = input;
-            commentSection.appendChild(p);
-            document.getElementById('comment').value = '';
-        });
-    </script>
+   <script src="../Kode/script.js"></script>
 </body>
 </html>
